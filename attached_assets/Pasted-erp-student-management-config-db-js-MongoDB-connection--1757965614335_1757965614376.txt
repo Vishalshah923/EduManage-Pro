@@ -1,0 +1,84 @@
+erp-student-management/
+│
+├── 📂 config/
+│   ├── db.js                 # MongoDB connection
+│   └── keys.js               # Secret keys (JWT, Payment API keys)
+│
+├── 📂 models/                # MongoDB Schemas
+│   ├── Student.js            # Admission data
+│   ├── Fee.js                # Fee payment records
+│   ├── Hostel.js             # Hostel allocation
+│   ├── Library.js            # Library issue/return
+│   ├── Exam.js               # Exam records
+│   └── User.js               # Login & roles (Admin/Student/Staff)
+│
+├── 📂 routes/                # Express routes
+│   ├── auth.js               # Login/Register
+│   ├── student.js            # Admission, student dashboard
+│   ├── fee.js                # Fee payment & receipts
+│   ├── hostel.js             # Hostel allocation
+│   ├── library.js            # Library management
+│   ├── exam.js               # Exam records
+│   └── admin.js              # Admin dashboard + management
+│
+├── 📂 controllers/           # Business logic
+│   ├── authController.js
+│   ├── studentController.js
+│   ├── feeController.js
+│   ├── hostelController.js
+│   ├── libraryController.js
+│   ├── examController.js
+│   └── adminController.js
+│
+├── 📂 views/                 # EJS Templates
+│   ├── 📂 partials/          # Header, Footer, Navbar
+│   │   ├── header.ejs
+│   │   ├── footer.ejs
+│   │   └── navbar.ejs
+│   │
+│   ├── home.ejs              # Landing page
+│   ├── login.ejs             # Login form
+│   ├── register.ejs          # New student registration
+│   │
+│   ├── student/              # Student-related pages
+│   │   ├── admissionForm.ejs
+│   │   ├── profile.ejs
+│   │   └── studentDashboard.ejs
+│   │
+│   ├── fee/                  # Fee module
+│   │   ├── payFee.ejs
+│   │   ├── receipt.ejs
+│   │   └── feeHistory.ejs
+│   │
+│   ├── hostel/               # Hostel module
+│   │   ├── hostelForm.ejs
+│   │   ├── hostelList.ejs
+│   │   └── hostelDashboard.ejs
+│   │
+│   ├── library/              # Library module
+│   │   ├── libraryDashboard.ejs
+│   │   ├── borrowBook.ejs
+│   │   └── returnBook.ejs
+│   │
+│   ├── exam/                 # Exam module
+│   │   ├── examForm.ejs
+│   │   ├── marksheet.ejs
+│   │   └── examDashboard.ejs
+│   │
+│   └── admin/                # Admin module
+│       ├── adminDashboard.ejs
+│       ├── studentList.ejs
+│       ├── feeReport.ejs
+│       ├── hostelReport.ejs
+│       ├── libraryReport.ejs
+│       └── examReport.ejs
+│
+├── 📂 public/                 # Static files
+│   ├── css/ (Bootstrap/Tailwind + custom CSS)
+│   ├── js/  (client-side scripts)
+│   ├── images/ (logos, icons)
+│
+├── .env                       # Environment variables (DB URL, API Keys)
+├── server.js                  # Main Express server
+├── package.json
+└── README.md
